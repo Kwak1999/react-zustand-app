@@ -30,7 +30,7 @@ React와 Zustand를 이용해 상태 관리 개념을 연습하기 위한 미니
 ### 2. TodoList
 - **추가**: 입력창에서 todo 작성 후 Add
 - **완료**: 완료 시 체크 → 취소선 표시
-- **삭제**: ❌ 버튼으로 삭제
+- **삭제**: x 버튼으로 삭제
 - Zustand `persist` + `sessionStorage`로 페이지 새로고침해도 유지
 
 ### 3. User
