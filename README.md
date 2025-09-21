@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Zustand Practice App (Counter + Todo + User)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React와 Zustand를 이용해 상태 관리 개념을 연습하기 위한 미니 프로젝트 
+초심자가 작성했지만 핵심 개념을 담아 복습과 포트폴리오 모두에 활용할 수 있도록 구성
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 프로젝트 개요
+- **목표**: Redux보다 가벼운 Zustand로 전역 상태 관리 패턴을 익히기
+- **구성**: `Counter`, `TodoList`, `User` 세 가지 상태 관리 예제를 구현
+- **특징**: `persist`와 `devtools` 미들웨어를 활용해 상태 유지 및 디버깅 경험
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 사용 기술 스택
+- React (CRA 기반)
+- Zustand (상태 관리)
+- Fetch API (샘플 사용자 데이터 요청)
+- sessionStorage / localStorage (상태 저장)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 주요 기능
+### 1. Counter
+- **증가** / **리셋** / **특정 값 설정** / **스토리지 초기화**
+- Zustand `persist`로 localStorage 상태 유지
+- `devtools`로 상태 변화 추적 가능
 
-### `npm run build`
+### 2. TodoList
+- **추가**: 입력창에서 todo 작성 후 Add
+- **완료**: 완료 시 체크 → 취소선 표시
+- **삭제**: ❌ 버튼으로 삭제
+- Zustand `persist` + `sessionStorage`로 페이지 새로고침해도 유지
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. User
+- **Fetch**: `jsonplaceholder` API에서 사용자 정보(이름·전화번호) 불러오기
+- 상태 관리와 API 호출 패턴 연습
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 실행 방법
+```bash
+# 패키지 설치
+npx create-react-ap
+npm install zustand
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 개발 서버 실행
+npm start
+```
